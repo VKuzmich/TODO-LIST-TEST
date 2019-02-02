@@ -1,0 +1,29 @@
+
+h2, h4 {
+    text-align: center;
+
+}
+
+
+.header_table{
+
+background-color: aqua;
+}
+
+.container {
+  display: flex;  
+  margin: auto;
+    border-width: 2px;
+    border-color: black;
+    
+}
+
+
+  
+  div.centre {
+    text-align: left;
+    width: 400px;
+    background-color: #eee;
+    display: block;
+    margin: auto;
+  }
