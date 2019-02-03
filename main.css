@@ -1,13 +1,10 @@
-
+body {
+    background-image: linear-gradient(rgb(202, 207, 210), rgb(214, 137, 16));
+    background-size: auto;
+}
 
 h2, h4 {
     text-align: center;
-
-}
-
-body {
-  background-image: linear-gradient(rgb(202, 207, 210), rgb(214, 137, 16));
-  height: 100%;
 }
 
 .header_table{
