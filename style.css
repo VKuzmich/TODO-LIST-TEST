@@ -10,21 +10,11 @@ body {
   height: 100%;
 }
 
-.header_table{
+.table{
 
 background-color: rgb(46, 134, 193);
 
 }
-
-.container {
-  display: flex;  
-  margin: auto;
-    border-width: 2px;
-    border-color: black;
-    
-}
-
-
   
   div.centre {
     text-align: left;
