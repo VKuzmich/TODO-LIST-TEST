@@ -2,10 +2,11 @@
 <html lang="en" style="height: 100%;">
 <head>
     <meta charset="UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>todo list</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link href="style.css" rel="stylesheet">
 
 </head>
@@ -34,14 +35,20 @@
                             
                             <div class="container" style="border-top: 1px solid black">
                                 <div class="row" style="display:-webkit-inline-box">
-                                    <div class="col">
+                                    <div class="col" style="
+                                    width: 35px;
+                                    padding-left: 5px;
+                                    padding-right: 5px";>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="customCheck1">
                                             <label class="custom-control-label" for="customCheck1"></label>
                                        </div>
                                     </div>
-                                    <div class="col" style="width: 250px;height: 20px;">col2</div>
-                                    <div class="col">col3</div>
+                                    <div class="col" style="width: 270px;height: 20px;padding-left: 0px;padding-right: 0px;">col2</div>
+                                    <div class="col" style="
+                                    width: 65px;
+                                    padding-left: 0px;
+                                    padding-right: 0px;"> col3</div>
                                 </div>
                             </div>
 
@@ -69,6 +76,9 @@
 
 <footer> © 2019 Ruby Garage</footer>
 </body>
+
+<script src="bootstrap.min.js"></script>
+<script src="main.js"></script>
 
 </html>
 
