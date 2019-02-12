@@ -25,7 +25,7 @@ background-color: rgb(46, 134, 193);
   }
 
 footer {
-  position:absolute;
+  position:flex;
   bottom:0;
   left:0;
   font-size: 0.75em;
