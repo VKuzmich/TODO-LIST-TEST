@@ -48,6 +48,10 @@ footer {
   margin-top: 5px;
 }
 
+.task-head-pencil{
+  margin-right: 0px;
+}
+
 .input-group {
   margin-top: 8px;
   left: 5px;
