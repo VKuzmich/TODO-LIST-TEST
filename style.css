@@ -11,9 +11,7 @@ body {
 }
 
 .table{
-
-background-color: rgb(46, 134, 193);
-
+  background-color: rgb(46, 134, 193);
 }
   
   div.centre {
@@ -31,4 +29,148 @@ footer {
   font-size: 0.75em;
   text-align: center;
   padding-top: 30px;
+}
+
+.task-head{
+  background-color: rgb(46, 134, 193);
+}
+
+.task-head-icon{
+  margin-top: 2px;
+}
+
+.fa-calendar-alt {
+  margin-left: 10px;
+}
+
+.task-head-text{
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+.input-group {
+  margin-top: 8px;
+  left: 5px;
+}
+
+p {
+  line-height: normal;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+p.task:last-child { 
+  margin-bottom: 20px;
+
+}
+
+.task-container {
+  border-bottom-left-radius:10px; 
+  border-bottom-right-radius:10px;
+}
+
+.row-task {
+  background-color:beige; 
+  border-bottom: #adb5bd;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+
+.row-task:last-child {
+  border-bottom-left-radius:10px; 
+  border-bottom-right-radius:10px;
+}
+
+.form-check-input {
+  margin-top: 0;
+  bottom: -7;
+  top: -7;
+  top: -7;
+  bottom: -7;
+  top: -7;
+}
+
+.col1-task {
+  border-right-style: solid;
+  border-color: rgb(223, 139, 139);
+  border-right-width: 1px; 
+  margin-left: 10px;
+  margin-right: 5px; 
+  padding-right: 5px;
+}
+
+.col2-task {
+  border-left-style: solid;
+  border-color: rgb(223, 139, 139); 
+  border-left-width: 1px; 
+  margin-left: 3px;
+  padding-right: 0px;
+  margin-right: 20px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #adb5bd;
+
+}
+
+.col3-separator1 {
+  top: 5px;
+  padding-right: 0px;
+  padding-left: 0px;
+  right: 10px;left: 0px;
+}
+
+.col3-mixer{
+  margin-right: 15px;
+  margin-left: -12;
+  margin-left: -10;
+
+}
+
+.col3-sort {
+
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+.col3-pencil {
+  left: 0px;
+  padding-left: 0px;
+  padding-right: 5px;
+  margin-right: 7px;
+}
+
+.col3-separator2{
+  top: 5px;
+  padding-right: 0px;
+  padding-left: 5px;
+  right: 15px;
+}
+
+.col3-trashcan {
+  padding-left: 0px;
+  right: 12px;
+  left: -10;
+  padding-right: 10px;
+}
+
+.separator2 {
+  content:' ';
+  display: inline-block;
+  background: rgb(146, 150, 151);
+  margin: 0px 4px;
+  height: 18px;
+  width: 1px;
+  vertical-align: centre;
+}
+
+.separator-task1 {
+  content:' ';
+  display: inline-block;
+  background: rgb(146, 150, 151);
+  margin: 0px 4px;
+  height: 18px;
+  width: 1px;
+  vertical-align: centre;
 }
