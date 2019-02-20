@@ -8,7 +8,14 @@
     <title>todo list</title>
     <link rel="stylesheet" href="bootstrap.min.css">
     <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="main.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+    <link href="path/to/bootstrap-editable/css/bootstrap-editable.css" rel="stylesheet">
+    <script src="path/to/bootstrap-editable/js/bootstrap-editable.min.js"></script>
 
 </head>
 <body>
@@ -24,79 +31,204 @@
     </div>
 
 <!-- new table  -->
-            <div class="container task-container" style="width: 60%; line-height: 3">
+    <div class="container task-container" style="width: 60%; line-height: 3">
                
-               <!--head table-->
-                <div class="row task-head">
+        <!--head table-->
+        <div class="row task-head">
                   
-                  <div class="col-xsm task-head-icon">
-                        <i class="far fa-calendar-alt"></i>
-                  </div>
-                 
-                  <div class="col task-head-text text-white">
-                    <p style="margin-bottom: 0px;">Complete the test task for Ruby Garage</p>
-                  </div>
-                  
-                  <div class="col-xsm">
-                     <div class="row task-head-pencil"> 
-                            
-                        <div class="col col3-pencil">
-                                    <i class="fas fa-pencil-alt"></i>
-                            </div>
-                                
-                            <div class="col col3-separator2">
-                                    <span class="separator separator2"></span>
-                            </div>
-                                        
-                            <div class="col col3-trashcan">
-                                    <i class="far fa-trash-alt"></i>
-                            </div>
-                     </div>     
-                
-                 </div>
-            
+            <div class="col-xsm task-head-icon">
+                <i class="far fa-calendar-alt"></i>
             </div>
+                 
+            <div class="col task-head-text text-white">
+                <p style="margin-bottom: 0px;">Complete the test task for Ruby Garage</p>
+            </div>
+                  
+            <div class="col-xsm task-head-edit">
+                
+                <div class="row task-head-pencil"> 
+                            
+                    <div class="col col3-pencil">
+                        <button class="btn btn-pencil">        
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                                
+                    <div class="col col3-separator2">
+                        <span class="separator separator2"></span>
+                    </div>
+                                        
+                    <div class="col col3-trashcan">
+                        <button class="btn btn-trash">
+                        <i class="far fa-trash-alt"></i>
+                    </div>
 
-                   <!-- adding button and field -->
-                <div class="row" style="background-color:rgb(199, 194, 194)">
-                  <div class="col-xsm" style="margin-left: 12px; margin-top: 3px;">
+                </div>     
+                
+            </div>
+            
+        </div>
+
+        <!-- adding button and field -->
+        <div  class="row" style="background-color:rgb(199, 194, 194)">
+            
+            <div class="col-xsm" style="margin-left: 12px; margin-top: 3px;">
                         
                         <span style="">
                             <i class="fas fa-plus fa-lg" style="color:rgb(14, 88, 14)"></i>
                         </span>
-                  </div>
-                  <div class="col" style="width: 60%; line-height: 3">
-                        <div class="input-group mb-2">
-                                <input type="text" class="form-control" placeholder="Start typing here to create the task..." aria-label="Start typing here to create the task..." aria-describedby="button-addon2">
-                                <div class="input-group-append">
-                                  <button class="btn btn-outline-secondary text-white" type="button" id="button-addon2"
-                                  style="background-color:#0f8d2d">
-                                      Add Task</button>
-                                </div>
+
+            </div>
+
+            <div class="col" style="width: 60%; line-height: 3">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" placeholder="Start typing here to create the task..." aria-label="Start typing here to create the task..." aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary text-white" type="button" id="button-addtask"
+                                style="background-color:#0f8d2d">
+                                Add Task</button>
                         </div>
-                  </div>
-                 
                 </div>
+            </div>
+                 
+        </div>
+
+        <script>
+        var counter = 1;
+
+        $('#button-addtask').click(function(){
+            var $newDiv = $("<div></div>");
+          $newDiv.attr("id", "row1" + counter++);
+          $("#row1").append($newDiv);
+        });
+        </script>
 
         <!-- field for added tasks -->
-                <div class="row row-task">
-                        <div class="col-xsm col1-task d-flex align-items-center justify-content-center">
+        <div id="listWithHandle" class="list-group">
+                
+                <div id="row1" class="row row-task">
+                        
+                    <div class="col-xsm col1-task d-flex align-items-center justify-content-center">
+                        <div class="form-check d-flex align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1"></label>
+                        </div>
+                    </div>
+                       
+                    <div class="col col2-task">
+                        <p class="task font-weight-light">
+                              Write HTML & CSS. Do home tasks and go to school. Write programm with JavaScript.1
+                        </p>
+                        <input type="text" hidden> 
+                    </div>
+                        
+                    <div  class="col-xsm col3-mixer d-flex align-items-center justify-content-center">
+                        <div id="row3-mixer" class="row"> 
+                            <div class="col col3-sort">
+                                <button class="btn btn-sort">
+                                <i class="fas fa-sort"></i>
+                            </div> 
+                                    
+                            <div class="col col3-separator1">
+                                <span class="separator separator-task1">
+                                </span>
+                            </div>
+                                    
+                            <div class="col col3-pencil">
+                                <button class="btn btn-pencil" >
+                                <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                                
+                            <div class="col col3-separator2">
+                                <span class="separator separator2"></span>
+                            </div>
+                                        
+                            <div class="col col3-trashcan">
+                                <button id="trash" class="btn btn-trash" >
+                                <i class="far fa-trash-alt"></i>
+                            </div>
+                        </div>    
+                            
+                    </div>
+                    
+                </div>
+        
+        
+        <script>
+               $( "#trash" ).click(function() {
+                $('#row1').remove();
+                })
+
+        </script>
+
+        <!-- field for added tasks -->
+        
+  
+            <div class="row row-task">
+                <div class="col-xsm col1-task d-flex align-items-center justify-content-center">
+                    <div class="form-check d-flex align-items-center">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                        </label>
+                    </div>
+                </div>
+
+                        <div class="col col2-task">
+                            <p class="task font-weight-light" >Write HTML & CSS. Do home tasks and 
+                                go to school. Write programm with JavaScript.2</p>
+                        </div>
+
+                <div class="col-xsm  col3-mixer d-flex align-items-center justify-content-center">
+                    <div class="row"> 
+                        <div class="col col3-sort">
+                            <button class="btn btn-sort">
+                            <i class="fas fa-sort"></i>
+                        </div> 
+                                
+                        <div class="col col3-separator1">
+                            <span class="separator separator-task1">
+                            </span>
+                        </div>
+                            
+                        <div class="col col3-pencil">
+                            <button class="btn btn-pencil">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        
+                        <div class="col col3-separator2">
+                            <span class="separator separator2"></span>
+                        </div>
+                                
+                        <div class="col col3-trashcan">
+                            <button class="btn btn-trash">
+                            <i class="far fa-trash-alt"></i>
+                        </div>
+                    </div>    
+            
+                </div>
+
+            </div>
+
+            <div class="row row-task">
+                        
+                <div class="col-xsm col1-task d-flex align-items-center justify-content-center">
                                 <div class="form-check d-flex align-items-center">
                                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1"></label>
                                 </div>
-                        </div>
+                </div>
                        
-                        <div class="col col2-task">
+                <div class="col col2-task">
                             <p class="task font-weight-light" >
-                              Write HTML & CSS. Do home tasks and go to school. Write programm with JavaScript.
+                              Write HTML & CSS. Do home tasks and go to school. Write programm with JavaScript.3
                             </p>
-                        </div>
+                </div>
                         
                         <div class="col-xsm col3-mixer d-flex align-items-center justify-content-center">
                             <div class="row"> 
                                 <div class="col col3-sort">
-                                    <i class="fas fa-sort"></i>
+                                    <button class="btn btn-sort">
+                                    <i class="fas fa-sort sort-drag"></i>
                                 </div> 
                                         
                                 <div class="col col3-separator1">
@@ -105,6 +237,7 @@
                                 </div>
                                     
                                 <div class="col col3-pencil">
+                                    <button class="btn btn-pencil">
                                     <i class="fas fa-pencil-alt"></i>
                                 </div>
                                 
@@ -113,58 +246,16 @@
                                 </div>
                                         
                                 <div class="col col3-trashcan">
+                                    <button class="btn btn-trash">
                                     <i class="far fa-trash-alt"></i>
                                 </div>
                             </div>    
-                            
                         </div>
-
-                </div>
-
-
-        <!-- field for added tasks -->
-        <div class="row row-task">
-            <div class="col-xsm col1-task d-flex align-items-center justify-content-center">
-                <div class="form-check d-flex align-items-center">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
-                    </label>
-                </div>
+                    </div>
             </div>
+    </div>
 
-                    <div class="col col2-task">
-                        <p class="task font-weight-light" >Write HTML & CSS. Do home tasks and go to school. Write programm with JavaScript.</p>
-                    </div>
 
-            <div class="col-xsm  col3-mixer d-flex align-items-center justify-content-center">
-                <div class="row"> 
-                    <div class="col col3-sort">
-                        <i class="fas fa-sort"></i>
-                    </div> 
-                            
-                    <div class="col col3-separator1">
-                        <span class="separator separator-task1">
-                        </span>
-                    </div>
-                        
-                    <div class="col col3-pencil">
-                        <i class="fas fa-pencil-alt"></i>
-                    </div>
-                    
-                    <div class="col col3-separator2">
-                        <span class="separator separator2"></span>
-                    </div>
-                            
-                    <div class="col col3-trashcan">
-                        <i class="far fa-trash-alt"></i>
-                    </div>
-                </div>    
-        
-            </div>
-
-        </div>
-
-</div>
     
         <br>
 
@@ -201,7 +292,10 @@
   <br>
   <br>
 
-
+  <input type="text" id="in"></input>
+  <button id="add">Add</button>
+  <hr>
+  <div id="out"></div>
 
 
 <footer> © 2019 Ruby Garage</footer>

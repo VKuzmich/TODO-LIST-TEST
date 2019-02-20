@@ -117,6 +117,32 @@ p.task:last-child {
 
 }
 
+.task-head>.task-head-edit{
+  visibility:hidden;
+}
+
+.task-head:hover>.task-head-edit{
+  visibility:visible;
+}
+
+.row-task>.col3-mixer{
+  visibility: hidden;
+}
+
+.row-task:hover>.col3-mixer{
+  visibility: visible;
+}
+
+
+
+.col3-mixer{
+  margin-right: 15px;
+  margin-left: -12;
+  margin-left: -10;
+ 
+  
+}
+
 .col3-separator1 {
   top: 5px;
   padding-right: 0px;
@@ -124,18 +150,39 @@ p.task:last-child {
   right: 10px;left: 0px;
 }
 
-.col3-mixer{
-  margin-right: 15px;
-  margin-left: -12;
-  margin-left: -10;
-
-}
-
 .col3-sort {
 
   padding-left: 5px;
   padding-right: 5px;
 
+}
+
+.btn-sort{
+
+  padding: 0px;
+  border: 0px;
+
+}
+
+.btn-pencil{
+  padding-left: 0px;
+    padding-right: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.btn-trash{
+
+  padding-left: 0px;
+  padding-right: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
 }
 
 .col3-pencil {
