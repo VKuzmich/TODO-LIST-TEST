@@ -14,13 +14,13 @@ body {
   background-color: rgb(46, 134, 193);
 }
   
-  div.centre {
-    text-align: left;
-    width: 400px;
-    background-color: #eee;
-    display: block;
-    margin: auto;
-  }
+div.centre {
+  text-align: left;
+  width: 400px;
+  background-color: #eee;
+  display: block;
+  margin: auto;
+}
 
 footer {
   position:flex;
@@ -43,6 +43,10 @@ footer {
   margin-left: 10px;
 }
 
+.task-head-written{
+  margin-bottom: 0px;
+}
+
 .task-head-text{
   font-size: 1.1rem;
   margin-top: 5px;
@@ -50,6 +54,28 @@ footer {
 
 .task-head-pencil{
   margin-right: 0px;
+}
+
+.add-task{
+  background-color:#0f8d2d;
+}
+
+.row-button-field{
+  background-color:rgb(199, 194, 194);
+}
+
+.button-plus{
+  margin-left: 12px; margin-top: 3px;
+}
+
+.fa-plus{
+  color:rgb(14, 88, 14);
+}
+
+.button-plus-task{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
 }
 
 .input-group {

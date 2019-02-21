@@ -41,7 +41,7 @@
             </div>
                  
             <div class="col task-head-text text-white">
-                <p style="margin-bottom: 0px;">Complete the test task for Ruby Garage</p>
+                <p class="task-head-written">Complete the test task for Ruby Garage</p>
             </div>
                   
             <div class="col-xsm task-head-edit">
@@ -49,7 +49,7 @@
                 <div class="row task-head-pencil"> 
                             
                     <div class="col col3-pencil">
-                        <button class="btn btn-pencil">        
+                        <button class="btn btn-pencil pencil-head">        
                         <i class="fas fa-pencil-alt"></i>
                     </div>
                                 
@@ -58,7 +58,7 @@
                     </div>
                                         
                     <div class="col col3-trashcan">
-                        <button class="btn btn-trash">
+                        <button class="btn btn-trash trash">
                         <i class="far fa-trash-alt"></i>
                     </div>
 
@@ -68,44 +68,31 @@
             
         </div>
 
-        <!-- adding button and field -->
-        <div  class="row" style="background-color:rgb(199, 194, 194)">
+        <!-- adding task button  -->
+        <div  class="row row-button-field">
             
-            <div class="col-xsm" style="margin-left: 12px; margin-top: 3px;">
-                        
-                        <span style="">
-                            <i class="fas fa-plus fa-lg" style="color:rgb(14, 88, 14)"></i>
-                        </span>
-
+            <div class="col-xsm button-plus">
+                    <button class="btn button-plus-task">
+                    <i class="fas fa-plus fa-lg"></i>
             </div>
 
-            <div class="col" style="width: 60%; line-height: 3">
+            <div class="col">
                 <div class="input-group mb-2">
-                    <input type="text" class="form-control" placeholder="Start typing here to create the task..." aria-label="Start typing here to create the task..." aria-describedby="button-addon2">
+                    <input type="text" class="form-control input-task" placeholder="Start typing here to create the task..." aria-label="Start typing here to create the task..." aria-describedby="button-addon2">
                         <div class="input-group-append">
-                            <button class="btn btn-outline-secondary text-white" type="button" id="button-addtask"
-                                style="background-color:#0f8d2d">
-                                Add Task</button>
+                            <button class="btn btn-outline-secondary text-white add-task" type="button" id="button-addtask">Add Task</button>
                         </div>
                 </div>
             </div>
                  
         </div>
 
-        <script>
-        var counter = 1;
-
-        $('#button-addtask').click(function(){
-            var $newDiv = $("<div></div>");
-          $newDiv.attr("id", "row1" + counter++);
-          $("#row1").append($newDiv);
-        });
-        </script>
+    
 
         <!-- field for added tasks -->
         <div id="listWithHandle" class="list-group">
                 
-                <div id="row1" class="row row-task">
+                <div class="row row-task">
                         
                     <div class="col-xsm col1-task d-flex align-items-center justify-content-center">
                         <div class="form-check d-flex align-items-center">
@@ -115,10 +102,7 @@
                     </div>
                        
                     <div class="col col2-task">
-                        <p class="task font-weight-light">
-                              Write HTML & CSS. Do home tasks and go to school. Write programm with JavaScript.1
-                        </p>
-                        <input type="text" hidden> 
+                        <p class="task font-weight-light"> Write HTML & CSS. Do home tasks and go to school. Write programm with JavaScript.1</p>
                     </div>
                         
                     <div  class="col-xsm col3-mixer d-flex align-items-center justify-content-center">
@@ -154,12 +138,6 @@
                 </div>
         
         
-        <script>
-               $( "#trash" ).click(function() {
-                $('#row1').remove();
-                })
-
-        </script>
 
         <!-- field for added tasks -->
         
@@ -174,8 +152,7 @@
                 </div>
 
                         <div class="col col2-task">
-                            <p class="task font-weight-light" >Write HTML & CSS. Do home tasks and 
-                                go to school. Write programm with JavaScript.2</p>
+                            <p class="task font-weight-light" >Write HTML & CSS. Do home tasks and go to school. Write programm with JavaScript.2</p>
                         </div>
 
                 <div class="col-xsm  col3-mixer d-flex align-items-center justify-content-center">
@@ -212,16 +189,14 @@
             <div class="row row-task">
                         
                 <div class="col-xsm col1-task d-flex align-items-center justify-content-center">
-                                <div class="form-check d-flex align-items-center">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                        <label class="form-check-label" for="defaultCheck1"></label>
-                                </div>
+                    <div class="form-check d-flex align-items-center">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1"></label>
+                    </div>
                 </div>
                        
                 <div class="col col2-task">
-                            <p class="task font-weight-light" >
-                              Write HTML & CSS. Do home tasks and go to school. Write programm with JavaScript.3
-                            </p>
+                            <p class="task font-weight-light" >Write HTML & CSS. Do home tasks and go to school. Write programm with JavaScript.3</p>
                 </div>
                         
                         <div class="col-xsm col3-mixer d-flex align-items-center justify-content-center">
@@ -252,54 +227,57 @@
                             </div>    
                         </div>
                     </div>
-            </div>
+        </div>
+
+    </div>
+    
+<br>
+<br>
+
+
+<!-- button to add task table -->
+    <div class="container" style="width: 60%; line-height: 2.5;">    
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-primary btn-sm" style="background-color: rgb(46, 134, 193)"> 
+                <b style="font-size: 25px; text-shadow: 0 1px 1px; color: rgba(60, 84, 121, 1)">+</b>  Add TODO List   </button>
+        </div>
+    </div>
+
+<br>
+<br>
+
+<!-- /.modal -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Write task</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control input-task-edit" placeholder="Enter">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary save-changes" data-dismiss="modal">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
     </div>
 
 
-    
-        <br>
-
-
-
-        
-          <br>
-<!-- button to add task table -->
-                    <div class="container" style="width: 60%; line-height: 2.5;">
-                            <div class="row justify-content-center">
-                            <button type="button" class="btn btn-primary btn-sm" style="background-color: rgb(46, 134, 193)"> 
-                                <b style="font-size: 25px; text-shadow: 0 1px 1px; color: rgba(60, 84, 121, 1)">+</b>  Add TODO List   </button>
-                            </div>
-                    </div>
-
-            <br>
-
-            <br>
-
-
-
-
-
-            </div>
-                
-                
-        </div>
-
-
-              
 
 
 <br>
-  <br>
-  <br>
+<br>
+<br>
 
-  <input type="text" id="in"></input>
-  <button id="add">Add</button>
-  <hr>
-  <div id="out"></div>
 
 
 <footer> © 2019 Ruby Garage</footer>
 </body>
+
+
 
 <script src="bootstrap.min.js"></script>
 <script src="main.js"></script>
