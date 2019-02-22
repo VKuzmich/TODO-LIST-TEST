@@ -9,10 +9,7 @@ Sortable.create(listWithHandle, {
   });
 
 
-
-
-
-    addListenerToAddTask();
+addListenerToAddTask();
     function addListenerToAddTask(){
         $(".add-task").click(function(){
             var valueTask = $(".input-task").val();
