@@ -251,3 +251,21 @@ p.task:last-child {
   width: 1px;
   vertical-align: centre;
 }
+
+.add-new-table{
+  width: 60%; 
+  line-height: 2.5;
+}
+
+.btn-primary{
+  background-color: rgb(46, 134, 193);
+  padding-top: 0px;
+  padding-bottom: 6px;
+
+}
+
+b{
+  font-size: 25px; 
+  text-shadow: 0 1px 1px; 
+  color: rgba(60, 84, 121, 1)
+}

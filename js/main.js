@@ -38,7 +38,7 @@ addListenerToAddTask();
             }
             var containerTodo = 
             "<div id='todo-table' class='row row-task'><div class='col-xsm col1-task d-flex align-items-center justify-content-center'><div class='form-check d-flex align-items-center'><input class='form-check-input' type='checkbox' value='' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'></label></div></div><div class='col col2-task'><p class='task font-weight-light'>" + valueTask + "</p></div><div  class='col-xsm col3-mixer d-flex align-items-center justify-content-center'><div id='row3-mixer' class='row'><div class='col col3-sort'><button class='btn btn-sort'><i class='fas fa-sort'></i></div> <div class='col col3-separator1'><span class='separator separator-task1'></span></div><div class='col col3-pencil'> <button class='btn btn-pencil' ><i class='fas fa-pencil-alt'></i></button></div><div class='col col3-separator2'><span class='separator separator2'></span></div><div class='col col3-trashcan'><button id='trash' class='btn btn-trash' ><i class='far fa-trash-alt'></i></div></div></div></div>";
-            $(".list-group").append(containerTodo);
+            $(".list-group").before(containerTodo);
             $(".input-task").val("");
             addListenerToDeleteTask();
             addListenerToEditTask();
@@ -97,3 +97,5 @@ function addListenerToEditTask(){
     
 //     });
 //     }
+
+
