@@ -9,23 +9,30 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="bootstrap.min.js"></script>
-   
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+    
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
 
-    <script src="js/main.js"></script>
+    
+  
 
     
 </head>
 <body>
     <div class="container center  w-50 p-3 h-25">
         <div class="col header">
-            <div class="row name">
+            <div class="row justify-content-md-center name">
                     <h2>SIMPLE TODO LISTS</h2>
             </div>
-            <div class="row name1">
+            <div class="row justify-content-md-center name1">
                     <h4>FROM RUBY GARAGE</h4>
             </div>
         </div>
@@ -35,10 +42,12 @@
     <div class="container task-container" style="width: 60%; line-height: 3">
                
         <!--head table-->
-        <div class="row task-head">
+        <div id="todo-table" class="row task-head">
                   
             <div class="col-xsm task-head-icon">
+                <button class="btn btn-calendar">
                 <i class="far fa-calendar-alt"></i>
+                
             </div>
                  
             <div class="col task-head-text text-white">
@@ -93,7 +102,7 @@
         <!-- field for added tasks -->
         <div id="listWithHandle" class="list-group">
                 
-                <div class="row row-task">
+                <div id="todo-table" class="row row-task">
                         
                     <div class="col-xsm col1-task d-flex align-items-center justify-content-center">
                         <div class="form-check d-flex align-items-center">
@@ -143,7 +152,7 @@
         <!-- field for added tasks -->
         
   
-            <div class="row row-task">
+            <div id="todo-table" class="row row-task">
                 <div class="col-xsm col1-task d-flex align-items-center justify-content-center">
                     <div class="form-check d-flex align-items-center">
                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -187,7 +196,7 @@
 
             </div>
 
-            <div class="row row-task">
+            <div id="todo-table" class="row row-task">
                         
                 <div class="col-xsm col1-task d-flex align-items-center justify-content-center">
                     <div class="form-check d-flex align-items-center">
@@ -247,7 +256,7 @@
 <br>
 <br>
 
-<!-- /dialog modal -->
+<!-- /field modal -->
     <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -281,6 +290,6 @@
 
 
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 
 </html>
