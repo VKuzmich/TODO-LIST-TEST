@@ -31,6 +31,8 @@ footer {
   padding-top: 30px;
 }
 
+
+/* head of table */
 .task-head{
   background-color: rgb(46, 134, 193);
 }
@@ -38,6 +40,9 @@ footer {
 .task-head-icon{
   margin-top: 2px;
 }
+
+
+/* icons of head */
 
 .fa-calendar-alt {
   margin-left: 10px;
@@ -56,6 +61,8 @@ footer {
   margin-right: 0px;
 }
 
+
+/* additing task */
 .add-task{
   background-color:#0f8d2d;
 }
@@ -83,6 +90,8 @@ footer {
   left: 5px;
 }
 
+
+/* style of added task */
 p {
   line-height: normal;
   margin-bottom: 10px;
@@ -91,7 +100,6 @@ p {
 
 p.task:last-child { 
   margin-bottom: 20px;
-
 }
 
 .task-container {
@@ -121,6 +129,8 @@ p.task:last-child {
   top: -7;
 }
 
+
+/* red lines in table */
 .col1-task {
   border-right-style: solid;
   border-color: rgb(223, 139, 139);
@@ -143,6 +153,8 @@ p.task:last-child {
 
 }
 
+
+/* visible styles for buttons */
 .task-head>.task-head-edit{
   visibility:hidden;
 }
@@ -150,6 +162,7 @@ p.task:last-child {
 .task-head:hover>.task-head-edit{
   visibility:visible;
 }
+
 
 .row-task>.col3-mixer{
   visibility: hidden;
@@ -160,7 +173,7 @@ p.task:last-child {
 }
 
 
-
+/* styles for buttons - sortings, edititing, deleting. separating */
 .col3-mixer{
   margin-right: 15px;
   margin-left: -12;
@@ -252,6 +265,8 @@ p.task:last-child {
   vertical-align: centre;
 }
 
+
+/* styles for button to add new table */
 .add-new-table{
   width: 60%; 
   line-height: 2.5;
