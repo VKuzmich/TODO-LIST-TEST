@@ -42,11 +42,15 @@ footer {
 }
 
 .task-head-icon{
-  margin-top: 2px;
+  margin-bottom: 5px;
 }
 
 
 /* icons of head */
+
+.btn-calendar{
+  margin-bottom: 2px;
+}
 
 .fa-calendar-alt {
   margin-left: 10px;
