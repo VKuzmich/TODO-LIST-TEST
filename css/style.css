@@ -10,6 +10,10 @@ body {
   height: 100%;
 }
 
+.task-container{
+  line-height: 3;
+}
+
 .table{
   background-color: rgb(46, 134, 193);
 }
@@ -31,12 +35,21 @@ footer {
   padding-top: 30px;
 }
 
+
+/* head of table */
 .task-head{
   background-color: rgb(46, 134, 193);
 }
 
 .task-head-icon{
-  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+
+/* icons of head */
+
+.btn-calendar{
+  margin-bottom: 2px;
 }
 
 .fa-calendar-alt {
@@ -56,6 +69,8 @@ footer {
   margin-right: 0px;
 }
 
+
+/* additing task */
 .add-task{
   background-color:#0f8d2d;
 }
@@ -65,7 +80,7 @@ footer {
 }
 
 .button-plus{
-  margin-left: 12px; margin-top: 3px;
+  margin-left: 12px; margin-top: 0;
 }
 
 .fa-plus{
@@ -83,6 +98,8 @@ footer {
   left: 5px;
 }
 
+
+/* style of added task */
 p {
   line-height: normal;
   margin-bottom: 10px;
@@ -91,7 +108,6 @@ p {
 
 p.task:last-child { 
   margin-bottom: 20px;
-
 }
 
 .task-container {
@@ -121,6 +137,8 @@ p.task:last-child {
   top: -7;
 }
 
+
+/* red lines in table */
 .col1-task {
   border-right-style: solid;
   border-color: rgb(223, 139, 139);
@@ -143,6 +161,8 @@ p.task:last-child {
 
 }
 
+
+/* visible styles for buttons */
 .task-head>.task-head-edit{
   visibility:hidden;
 }
@@ -150,6 +170,7 @@ p.task:last-child {
 .task-head:hover>.task-head-edit{
   visibility:visible;
 }
+
 
 .row-task>.col3-mixer{
   visibility: hidden;
@@ -160,7 +181,7 @@ p.task:last-child {
 }
 
 
-
+/* styles for buttons - sortings, edititing, deleting. separating */
 .col3-mixer{
   margin-right: 15px;
   margin-left: -12;
@@ -251,3 +272,25 @@ p.task:last-child {
   width: 1px;
   vertical-align: centre;
 }
+
+
+/* styles for button to add new table */
+.add-new-table{
+  width: 60%; 
+  line-height: 2.5;
+}
+
+.btn-primary{
+  background-color: rgb(46, 134, 193);
+  padding-top: 0px;
+  padding-bottom: 6px;
+  display: table;
+  margin: 0 auto;
+}
+
+b{
+  font-size: 25px; 
+  text-shadow: 0 1px 1px; 
+  color: rgba(60, 84, 121, 1)
+}
+
