@@ -14,3 +14,10 @@ p {
 .task-head {
     background-color: rgb(46, 134, 193);
 }
+
+.task-head>.edit-trash{
+  visibility:hidden;
+}
+
+.task-head:hover>.edit-trash{
+  visibility:visible;
