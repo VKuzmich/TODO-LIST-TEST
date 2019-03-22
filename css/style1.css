@@ -1,0 +1,16 @@
+
+body {
+	background-image: linear-gradient(rgb(202, 207, 210), rgb(214, 137, 16));
+	height: 100%;}
+
+p {
+    margin-bottom: 0px;
+}
+
+#todo_item {
+	line-height: 3em;
+}
+
+.task-head {
+    background-color: rgb(46, 134, 193);
+}

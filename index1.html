@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" style="height: auto;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>todo list</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+     <link href="css/style1.css" rel="stylesheet">
+
+
+
+   
+    <script>
+    
+        window.onload = function () {
+            
+
+            // title of page
+            var divTitle = document.getElementById("Title");
+            
+            var h2 = document.createElement("h2");
+            h2.innerHTML = "SIMPLE TODO LISTS";
+            divTitle.appendChild(h2);
+            h2.style.textAlign = "center";
+
+            var h4 = document.createElement("h4");
+            h4.innerHTML = "FROM RUBY GARAGE";
+            divTitle.appendChild(h4);
+            h4.style.textAlign = "center";
+
+            divTitle.className = "container justify-content-center w-50 p-3 h-25"
+
+
+
+            // button for adding todo lists
+            var divAdd = document.getElementById("add_todo_list");
+            divAdd.className = "row justify-content-center";
+            var button=document.createElement("button");
+            button.className = "btn btn-primary btn-md"; 
+
+            var text = document.createTextNode("+ Add TODO List");
+            button.appendChild(text);
+            divAdd.appendChild(button);
+            button.style.backgroundColor = "rgb(46, 134, 193)"
+
+
+            // creating todo lists
+            var todoLists = document.getElementById("todo_item");
+            todoLists.className = "container justify-content-center col-md-8 offset-md-2 mb-4";
+            var divCreateRow= document.createElement("DIV");
+            divCreateRow.className = "row task-head "
+            var divCreate = document.createElement("DIV");
+            divCreate.className = "col form-inline";
+            var calendar = document.createElement("button");
+            calendar.className = "btn far fa-calendar-alt btn-sm"; 
+            divCreate.appendChild(calendar);
+
+
+            var pTable = document.createElement("p");
+            pTable.innerHTML = "Complete the test task for Ruby Garage";
+            divCreate.appendChild(pTable);
+            // pTable.style.text = "margin-top: 15px";
+
+            var pencilBtn = document.createElement("button");
+            pencilBtn.className = "btn btn-pencil border-0 mr-0 ml-auto"; 
+            divCreate.appendChild(pencilBtn);
+
+            var pencil = document.createElement("i");
+            pencil.className = "fas fa-pencil-alt"; 
+            pencilBtn.appendChild(pencil);
+
+            var line = document.createElement("p");
+            line.innerHTML = "|";
+            divCreate.appendChild(line);  
+
+
+            var trash = document.createElement("button");
+            trash.className = "btn fas fa-trash-alt btn-sm border-0"; 
+            divCreate.appendChild(trash);
+
+  
+           
+            
+            divCreateRow.appendChild(divCreate);
+            todoLists.appendChild(divCreateRow);
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+ 
+
+
+
+
+
+
+<div id="Title" class="container">       
+</div>
+
+
+<div id="todo_item">
+</div>
+
+
+
+
+
+<div id="add_todo_list">
+    
+</div>
+
+
+<div class="col col3-pencil">
+                                <button class="btn btn-pencil" >
+                                <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+
+
+     <!--    <div class="row justify-content-center">
+            <button type="button" class="btn " style="background-color: rgb(46, 134, 193)"> 
+                <b style="font-size: 25px; text-shadow: 0 1px 1px; color: rgba(60, 84, 121, 1)">+</b>  Add TODO List   </button>
+        </div>
+   
+ -->
+
+
+</body>
+</html>
