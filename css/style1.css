@@ -3,8 +3,10 @@ body {
 	background-image: linear-gradient(rgb(202, 207, 210), rgb(214, 137, 16));
 	height: 100%;}
 
-p {
+.todoItem {
     margin-bottom: 0px;
+    color: white;
+    
 }
 
 #todo_item {
@@ -20,4 +22,49 @@ p {
 }
 
 .task-head:hover>.edit-trash{
-  visibility:visible;
+  visibility:visible;}
+
+.task-row>.sort-edit-trash{
+  visibility:hidden;
+}
+
+.task-row:hover>.sort-edit-trash{
+  visibility:visible;}
+
+
+
+.button_add {
+	background-color: rgb(199, 194, 194);
+}
+
+.task-row {
+	background-color: beige;
+    border-bottom: #adb5bd;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+
+}
+
+.task {
+	margin-bottom: 0px;
+}
+
+.form-check {
+	border-right-style: solid;
+    border-color: rgb(223, 139, 139);
+    border-right-width: 1px;
+}
+
+.todo-list-text {
+	border-left-style: solid;
+    border-color: rgb(223, 139, 139);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #adb5bd;
+}
+
+
+
+
+
