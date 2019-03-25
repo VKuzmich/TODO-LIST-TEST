@@ -1,0 +1,296 @@
+
+
+h2, h4 {
+    text-align: center;
+
+}
+
+body {
+  background-image: linear-gradient(rgb(202, 207, 210), rgb(214, 137, 16));
+  height: 100%;
+}
+
+.task-container{
+  line-height: 3;
+}
+
+.table{
+  background-color: rgb(46, 134, 193);
+}
+  
+div.centre {
+  text-align: left;
+  width: 400px;
+  background-color: #eee;
+  display: block;
+  margin: auto;
+}
+
+footer {
+  position:flex;
+  bottom:0;
+  left:0;
+  font-size: 0.75em;
+  text-align: center;
+  padding-top: 30px;
+}
+
+
+/* head of table */
+.task-head{
+  background-color: rgb(46, 134, 193);
+}
+
+.task-head-icon{
+  margin-bottom: 5px;
+}
+
+
+/* icons of head */
+
+.btn-calendar{
+  margin-bottom: 2px;
+}
+
+.fa-calendar-alt {
+  margin-left: 10px;
+}
+
+.task-head-written{
+  margin-bottom: 0px;
+}
+
+.task-head-text{
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+.task-head-pencil{
+  margin-right: 0px;
+}
+
+
+/* additing task */
+.add-task{
+  background-color:#0f8d2d;
+}
+
+.row-button-field{
+  background-color:rgb(199, 194, 194);
+}
+
+.button-plus{
+  margin-left: 12px; margin-top: 0;
+}
+
+.fa-plus{
+  color:rgb(14, 88, 14);
+}
+
+.button-plus-task{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+.input-group {
+  margin-top: 8px;
+  left: 5px;
+}
+
+
+/* style of added task */
+p {
+  line-height: normal;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+p.task:last-child { 
+  margin-bottom: 20px;
+}
+
+.task-container {
+  border-bottom-left-radius:10px; 
+  border-bottom-right-radius:10px;
+}
+
+.row-task {
+  background-color:beige; 
+  border-bottom: #adb5bd;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+
+.row-task:last-child {
+  border-bottom-left-radius:10px; 
+  border-bottom-right-radius:10px;
+}
+
+.form-check-input {
+  margin-top: 0;
+  bottom: -7;
+  top: -7;
+  top: -7;
+  bottom: -7;
+  top: -7;
+}
+
+
+/* red lines in table */
+.col1-task {
+  border-right-style: solid;
+  border-color: rgb(223, 139, 139);
+  border-right-width: 1px; 
+  margin-left: 10px;
+  margin-right: 5px; 
+  padding-right: 5px;
+}
+
+.col2-task {
+  border-left-style: solid;
+  border-color: rgb(223, 139, 139); 
+  border-left-width: 1px; 
+  margin-left: 3px;
+  padding-right: 0px;
+  margin-right: 20px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #adb5bd;
+
+}
+
+
+/* visible styles for buttons */
+.task-head>.task-head-edit{
+  visibility:hidden;
+}
+
+.task-head:hover>.task-head-edit{
+  visibility:visible;
+}
+
+
+.row-task>.col3-mixer{
+  visibility: hidden;
+}
+
+.row-task:hover>.col3-mixer{
+  visibility: visible;
+}
+
+
+/* styles for buttons - sortings, edititing, deleting. separating */
+.col3-mixer{
+  margin-right: 15px;
+  margin-left: -12;
+  margin-left: -10;
+ 
+  
+}
+
+.col3-separator1 {
+  top: 5px;
+  padding-right: 0px;
+  padding-left: 0px;
+  right: 10px;left: 0px;
+}
+
+.col3-sort {
+
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+.btn-sort{
+
+  padding: 0px;
+  border: 0px;
+
+}
+
+.btn-pencil{
+  padding-left: 0px;
+    padding-right: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.btn-trash{
+
+  padding-left: 0px;
+  padding-right: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+}
+
+.col3-pencil {
+  left: 0px;
+  padding-left: 0px;
+  padding-right: 5px;
+  margin-right: 7px;
+}
+
+.col3-separator2{
+  top: 5px;
+  padding-right: 0px;
+  padding-left: 5px;
+  right: 15px;
+}
+
+.col3-trashcan {
+  padding-left: 0px;
+  right: 12px;
+  left: -10;
+  padding-right: 10px;
+}
+
+.separator2 {
+  content:' ';
+  display: inline-block;
+  background: rgb(146, 150, 151);
+  margin: 0px 4px;
+  height: 18px;
+  width: 1px;
+  vertical-align: centre;
+}
+
+.separator-task1 {
+  content:' ';
+  display: inline-block;
+  background: rgb(146, 150, 151);
+  margin: 0px 4px;
+  height: 18px;
+  width: 1px;
+  vertical-align: centre;
+}
+
+
+/* styles for button to add new table */
+.add-new-table{
+  width: 60%; 
+  line-height: 2.5;
+}
+
+.btn-primary{
+  background-color: rgb(46, 134, 193);
+  padding-top: 0px;
+  padding-bottom: 6px;
+  display: table;
+  margin: 0 auto;
+}
+
+b{
+  font-size: 25px; 
+  text-shadow: 0 1px 1px; 
+  color: rgba(60, 84, 121, 1)
+}
+
