@@ -4,7 +4,7 @@
 
 
             var todoListDiv = document.getElementById("Todo-List");
-            todoListDiv.className = "justify-content-center"
+            todoListDiv.className = "container justify-content-center";
 
             var divTitle = document.createElement("DIV");
             divTitle.setAttribute("id", "Title");
@@ -16,7 +16,7 @@
             h2.style.textAlign = "center";
 
             var h4 = document.createElement("h4");
-            h4.innerHTML = "FROM RUBY GARAGE";
+            h4.innerHTML = "FROM ....";
             divTitle.appendChild(h4);
             h4.style.textAlign = "center";
             divTitle.className = "container justify-content-center w-50 p-3 h-25"
@@ -336,10 +336,10 @@
 
 
     // sorting rows
-    Sortable.create(listWithHandle, {
-    handle: '.fa-sort',
-    animation: 150
-    });
+    // Sortable.create(listWithHandle, {
+    // handle: '.fa-sort',
+    // animation: 150
+    // });
 
 
 // creating button for affing new table
@@ -441,14 +441,15 @@ function addListenerToAddTask(){
                 alert("Please, enter your text!")
                 return false
             }
-            var containerTodo = 
-            "<div class='row task-row item-lists' id='todo-task'><div class='col-xsm form-inline form-check d-flex align-items-center p-3'><input type='checkbox' class='form-check-input' value='' id='defaultCheck1'><label class='form-check-label'></label></div><div class='col todo-list-text form-inline ml-1'><p class='task font-weight-light'>" + valueTask + "</p></div><div class='col-xsm sort-edit-trash form-inline'><button class='btn btn-sort btn-sm'><i class='fas fa-sort'></i></button><span>|</span><button class='btn btn-pencil btn-sm'><i class='fas fa-pencil-alt'></i></button><span>|</span><button class='btn fas fa-trash-alt btn-trash btn-sm'></button></div></div>"
+            var containerTodo = ("<div class='row task-row item-lists' id='todo-task'><div class='col-xsm form-inline form-check d-flex align-items-center p-3'><input type='checkbox' class='form-check-input' value='' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'></label></div><div class='col todo-list-text form-inline ml-1'><p class='task font-weight-light'>" + valueTask + "</p></div><div class='col-xsm sort-edit-trash form-inline'><button class='btn btn-sort btn-sm'><i class='fas fa-sort'></i></button><span>|</span><button class='btn btn-pencil btn-sm'><i class='fas fa-pencil-alt'></i></button><span>|</span><button class='btn fas fa-trash-alt btn-trash btn-sm'></button></div></div>");
+
             $(".list-group").append(containerTodo);
             $(".input-task").val("");
+           
             addListenerToDeleteTask();
             addListenerToEditTask();
-        });}
-
+        });
+    }
 
 
 
@@ -480,28 +481,88 @@ function addListenerToEditTask(){
             alert("Please, enter your text!")
             return false
         }
-        valueEditTask.text(inputForEdit.val());
+    valueEditTask.text(inputForEdit.val());
     });
-    
     });
     }
 
-    addListenerToAddTaskTable();
+    addListenerToAddTaskTable(); 
     function addListenerToAddTaskTable() {
+        
         $("button[name='AddingNewTable']").click(function () {
-            var domElement = 
-            $('<div id="todo_item" class="container task-container justify-content-center col-md-8 offset-md-2 mb-4 rounded-sm"><div class="row task-head" id="todo-task"><div class="col-xsm form-inline"><button class="btn far fa-calendar-alt btn"></button></div><div class="col form-inline"><p class="todoItem font-weight-light">Complete the test task for Ruby Garage</p></div><div class="col-xsm edit-trash form-inline"><button class="btn btn-pencil btn-sm"><i class="fas fa-pencil-alt"></i></button><span>|</span><button class="btn fas fa-trash-alt trash btn-sm"></button></div></div><div class="row button_add"><div class="col-xsm "><button class="btn btn-plus btn-lg"><i class="fa fa-plus"></i></button></div><div class="col form-inline input-group m-1 p-1"><input type="text" class="form-control input-task" placeholder="Start typing here to create the task..."><div class="input-group-append"><button class="btn btn-outline-secondary text-white add-task" type="button" style="background-color: green;">Add Task</button></div></div></div><div class="list-group" id="listWithHandle"><div class="row task-row item-lists" id="todo-task"><div class="col-xsm form-inline form-check d-flex align-items-center p-3"><input type="checkbox" class="form-check-input" value="" id="defaultCheck1"><label class="form-check-label"></label></div><div class="col todo-list-text form-inline ml-1"><p class="task font-weight-light">Write todo list</p></div><div class="col-xsm sort-edit-trash form-inline"><button class="btn btn-sort btn-sm"><i class="fas fa-sort"></i></button><span>|</span><button class="btn btn-pencil btn-sm"><i class="fas fa-pencil-alt"></i></button><span>|</span><button class="btn fas fa-trash-alt btn-trash btn-sm"></button></div></div></div></div>');
+            var domElement = ('<div id="todo_item" class="container task-container justify-content-center col-md-8 offset-md-2 mb-4 rounded-sm"><div class="row task-head task-row" id="todo-task"><div class="col-xsm form-inline"><button class="btn far fa-calendar-alt btn"></button></div><div class="col form-inline"><p class="todoItem font-weight-light">Complete the test task for Ruby Garage</p></div><div class="col-xsm edit-trash form-inline"><button class="btn btn-pencil btn-sm"><i class="fas fa-pencil-alt"></i></button><span>|</span><button class="btn fas fa-trash-alt trash btn-sm"></button></div></div><div class="row button_add"><div class="col-xsm "><button class="btn btn-plus btn-lg"><i class="fa fa-plus"></i></button></div><div class="col form-inline input-group m-1 p-1"><input type="text" class="form-control input-task" placeholder="Start typing here to create the task..."><div class="input-group-append"><button class="btn btn-outline-secondary text-white add-task" type="button" style="background-color: green;">Add Task</button></div></div></div><div class="list-group" id="listWithHandle"><div class="row task-row item-lists" id="todo-task"><div class="col-xsm form-inline form-check d-flex align-items-center p-3"><input type="checkbox" class="form-check-input" value="" id="defaultCheck1"><label class="form-check-label" for="defaultCheck1"></label></div><div class="col todo-list-text form-inline ml-1"><p class="task font-weight-light">Write todo list</p></div><div class="col-xsm sort-edit-trash form-inline"><button class="btn btn-sort btn-sm"><i class="fas fa-sort"></i></button><span>|</span><button class="btn btn-pencil btn-sm"><i class="fas fa-pencil-alt"></i></button><span>|</span><button class="btn fas fa-trash-alt btn-trash btn-sm"></button></div></div></div></div>');
             $(this).before(domElement);
-        });
+            addListenerToAddTask();
+            addListenerToDeleteTask();
+            addListenerToDeleteTaskHead();
+            addListenerToEditTask();
+            });
+        
+        
     }
 
 
-// <div id="todo_item" class="container task-container justify-content-center col-md-8 offset-md-2 mb-4 rounded-sm"><div class="row task-head" id="todo-task"><div class="col-xsm form-inline"><button class="btn far fa-calendar-alt btn"></button></div><div class="col form-inline"><p class="todoItem font-weight-light">Complete the test task for Ruby Garage</p></div><div class="col-xsm edit-trash form-inline"><button class="btn btn-pencil btn-sm"><i class="fas fa-pencil-alt"></i></button><span>|</span><button class="btn fas fa-trash-alt trash btn-sm"></button></div></div><div class="row button_add"><div class="col-xsm "><button class="btn btn-plus btn-lg"><i class="fa fa-plus"></i></button></div><div class="col form-inline input-group m-1 p-1"><input type="text" class="form-control input-task" placeholder="Start typing here to create the task..."><div class="input-group-append"><button class="btn btn-outline-secondary text-white add-task" type="button" style="background-color: green;">Add Task</button></div></div></div><div class="list-group" id="listWithHandle"><div class="row task-row" id="todo-task"><div class="col-xsm form-inline form-check d-flex align-items-center p-3"><input type="checkbox" class="form-check-input" value="" id="defaultCheck1"><label class="form-check-label"></label></div><div class="col todo-list-text form-inline ml-1"><p class="task font-weight-light">Write todo list</p></div><div class="col-xsm sort-edit-trash form-inline"><button class="btn btn-sort btn-sm"><i class="fas fa-sort"></i></button><span>|</span><button class="btn btn-pencil btn-sm"><i class="fas fa-pencil-alt"></i></button><span>|</span><button class="btn fas fa-trash-alt btn-trash btn-sm"></button></div></div></div></div>
 
 
 
-// "<div id='todo_item' class='container task-container justify-content-center col-md-8 offset-md-2 mb-4 rounded-sm'><div class='row task-head' id='todo-task'><div class='col-xsm form-inline'><button class='btn far fa-calendar-alt btn'></button></div><div class='col form-inline'><p class='todoItem font-weight-light'>Complete the test task for Ruby Garage</p></div><div class='col-xsm edit-trash form-inline'><button class='btn btn-pencil btn-sm'><i class='fas fa-pencil-alt'></i></button><span>|</span><button class='btn fas fa-trash-alt trash btn-sm'></button></div></div><div class='row button_add'><div class='col-xsm'><button class='btn btn-plus btn-lg'><i class='fa fa-plus'></i></button></div><div class='col form-inline input-group m-1 p-1'><input type='text' class='form-control input-task' placeholder='Start typing here to create the task...'><div class='input-group-append'><button class='btn btn-outline-secondary text-white add-task' type='button' style='background-color: green;'>Add Task</button></div></div></div><div class='list-group' id='listWithHandle'><div class='row task-row' id='todo-task'><div class='col-xsm form-inline form-check d-flex align-items-center p-3'><input type='checkbox' class='form-check-input' value='' id='defaultCheck1'><label class='form-check-label'></label></div><div class='col todo-list-text form-inline ml-1'><p class='task font-weight-light'>Write todo list</p></div><div class='col-xsm sort-edit-trash form-inline'><button class='btn btn-sort btn-sm'><i class='fas fa-sort'></i></button><span>|</span><button class='btn btn-pencil btn-sm'><i class='fas fa-pencil-alt'></i></button><span>|</span><button class='btn fas fa-trash-alt btn-trash btn-sm'></button></div></div></div></div>"
 
 
+var todoNewListDiv = document.getElementById("NewTable");
+            todoNewListDiv.className = "container justify-content-center";
+
+            var newDivTitle = document.createElement("DIV");
+            newDivTitle.setAttribute("id", "newTitle");
+            todoNewListDiv.appendChild(newDivTitle);
+
+            var newH2 = document.createElement("h2");
+            newDivTitle.appendChild(newH2);
+            newH2.innerHTML = "SIMPLE TODO LISTS";
+            newH2.style.textAlign = "center";
+
+            var newH4 = document.createElement("h4");
+            newH4.innerHTML = "FROM ....";
+            newDivTitle.appendChild(newH4);
+            newH4.style.textAlign = "center";
+            newDivTitle.className = "container justify-content-center w-50 p-3 h-25"
+
+
+var todoNewListDiv = document.getElementById("NewTable");
+var todoNewLists = document.createElement("DIV");
+            todoNewLists.setAttribute("id", "todo_item1");
+            todoNewLists.className = "container justify-content-center col-md-8 offset-md-2 mb-4 rounded-sm";
+            todoNewListDiv.appendChild(todoNewLists);
+
+initGame();
+    function  initGame(){
+   
+        let count=1, game='';
+    for (let i=0;i<3;i++){
+        game+= '<div class="row justify-content-center">'
+            for(let j=0;j<3;j++){
+               game+= '<div class="col-sm-1 col-2 cell" data-cell=" ' +count+ ' " onclick="moveCell();"><div class="cell__content" data_id="cell_'+i+ '"></div></div>'
+                count++;
+            }
+        game+='</div>'
+        }
+document.getElementById("todo_item1").innerHTML= game;
+}
+
+
+
+// initGame();
+//     function  initGame(data){
+//         data.push('');
+//         let count=1, game='';
+//     for (let i=0;i<4;i++){
+//         game+= '<div class="row justify-content-center">'
+//             for(let j=0;j<4;j++){
+//                game+= '<div class="col-sm-1 col-2 cell" data-cell=" ' +count+ ' " onclick="moveCell();"><div class="cell__content" data_id="' + data[count-1] + '">' + data[count-1] + '</div></div>'
+//                 count++;
+//             }
+//         game+='</div>'
+
+//         }
+//        document.getElementById("game").innerHTML= game;
+// }
 
 
