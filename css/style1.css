@@ -94,3 +94,31 @@ body {
 
 
 
+
+
+.to-do {
+
+        }
+
+        .to-do__header {
+            padding: 15px;
+            background: cornflowerblue;
+            text-align: center;
+            color: white;
+            border-radius: 3px;
+        }
+
+        .to-do__action-input {
+            border-radius: 3px;
+        }
+        .to-do__item{
+            border: 1px solid darkgray;
+        }
+        .col-1, .col-7, .col-4{
+            border: 1px solid darkgray;
+
+        }
+        .app{
+            margin-top: 40px ;
+        }
+
